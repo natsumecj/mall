@@ -9,7 +9,7 @@
         placeholder="请输入搜索关键词"
         show-action
         @search="onSearch"
-        style="flex: 2;"
+        style="flex: 2"
       >
         <div slot="action" @click="onSearch">搜索</div>
       </van-search>
@@ -26,9 +26,10 @@
             v-for="(item, index) in tab.category"
             :key="item.mallCategoryId"
             style="flex:1;padding: 6px;text-align: center"
+            @click="cate(index)"
           >
-            <img :src="item.image" alt="" style="width:50px;height:50px;" />
-            <div>{{ item.mallCategoryName }}</div>
+            <img :src="item.image" alt="" />
+            <div class="mallname">{{ item.mallCategoryName }}</div>
           </div>
         </div>
       </van-col>
@@ -44,43 +45,34 @@
       </van-col>
     </van-row>
     <van-row>
-      <van-col span="24">
-        <van-panel title="商品推荐">
-          <div class="wrapper" ref="wrapper">
-            <ul class="content">
-              <li v-for="(item, index) in tab.recommend" :key="item.goodsId">
-                <div class="recommendgoods">
-                  <img :src="item.image" alt="" />
-                  <p>{{ item.goodsName }}</p>
-                  <p>
-                    ￥{{ item.mallPrice }}
-                    <s style="font-size: 10px;color: #747474">{{
-                      item.price
-                    }}</s>
-                  </p>
-                  <div style="display: flex;padding: 5px">
-                    <div
-                      style="background-color: #d9c20c;padding: 5px;flex: 1;border-radius:5px;text-align: center"
-                    >
-                      <van-icon
-                        name="shopping-cart"
-                        size="20px"
-                        color="white"
-                      ></van-icon>
-                    </div>
-                    <div
-                      style="padding: 5px;background-color: #c43a04;font-size: 15px;flex: 2;border-radius:5px;color: white;text-align: center"
-                      @click="goods(item.goodsId)"
-                    >
-                      查看详情
-                    </div>
+      <van-panel title="商品推荐">
+        <div class="wrapper" ref="wrapper">
+          <ul class="content">
+            <li v-for="(item, index) in tab.recommend" :key="item.goodsId">
+              <div class="recommendgoods">
+                <img :src="item.image" alt="" />
+                <p>{{ item.goodsName }}</p>
+                <p>
+                  ￥{{ item.mallPrice }}
+                  <s class="ss">{{ item.price }}</s>
+                </p>
+                <div style="display: flex;padding: 5px">
+                  <div class="car" @click="cart(item)">
+                    <van-icon
+                      name="shopping-cart"
+                      size="20px"
+                      color="white"
+                    ></van-icon>
+                  </div>
+                  <div class="det" @click="todetails(item)">
+                    查看详情
                   </div>
                 </div>
-              </li>
-            </ul>
-          </div>
-        </van-panel>
-      </van-col>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </van-panel>
     </van-row>
     <van-row type="flex" justify="center">
       <div style="padding: 10px">
@@ -98,7 +90,7 @@
           v-for="(item, index) in tab.floor1"
           :key="item.goodsId"
           class="floorgoods"
-          @click="todetails(item.goodsId)"
+          @click="todetails(item)"
         >
           <img :src="item.image" alt="" />
         </div>
@@ -110,7 +102,7 @@
           2F
         </div>
         <div class="floorname" v-if="tab.floorName">
-          {{ tab.floorName.floor2}}
+          {{ tab.floorName.floor2 }}
         </div>
       </div>
     </van-row>
@@ -120,6 +112,7 @@
           v-for="(item, index) in tab.floor2"
           :key="item.goodsId"
           class="floorgoods"
+          @click="todetails(item)"
         >
           <img :src="item.image" alt="" />
         </div>
@@ -141,6 +134,7 @@
           v-for="(item, index) in tab.floor3"
           :key="item.goodsId"
           class="floorgoods"
+          @click="todetails(item)"
         >
           <img :src="item.image" alt="" />
         </div>
@@ -159,21 +153,25 @@
           v-for="(item, index) in tab.hotGoods"
           :key="item.goodsId"
           class="hotgoods"
+          @click="todetails(item)"
         >
           <img :src="item.image" alt="" />
           <p class="hotgoodsname">{{ item.name }}</p>
           <p class="hotgoodsprice">
             ￥{{ item.mallPrice }}
-            <s style="font-size: 10px;color: #747474">{{ item.price }}</s>
+            <s class="ss">{{ item.price }}</s>
           </p>
         </div>
       </div>
     </van-row>
+      <br>
+      <br>
   </div>
 </template>
 
 <script>
 import BScroll from "better-scroll";
+import axios from "axios"
 export default {
   name: "home",
   components: {},
@@ -185,9 +183,32 @@ export default {
   },
   methods: {
     onSearch() {},
-    todetails(id) {
-      this.$router.push({ name: "details", query: { id: id } });
-      console.log(id);
+    todetails(item) {
+      this.$router.push({ name: "details", query: { id: item.goodsId } });
+      // console.log(id);
+    },
+    cate(index){
+      this.$router.push({
+        name:'classification',
+        params:{
+          index:index
+        }
+      })
+      // this.$store.state.actives=1
+    },
+    cart(item){
+      axios
+              .post("api/v1/addShop", {
+                id: item.goodsId
+              })
+              .then(res => {
+                if (res.code === 200) {
+                  this.$toast.success(res.msg);
+                }
+              })
+              .catch(err => {
+                console.log(err);
+              });
     }
   },
   mounted() {
@@ -216,7 +237,7 @@ export default {
 <style scoped lang="scss">
 .city {
   padding: 15px 0px 10px 15px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .swipe {
   width: 100%;
@@ -224,23 +245,28 @@ export default {
 .classification {
   margin: 15px;
   display: flex;
-  height: 80px;
   background-color: #ffffff;
   border-radius: 5px;
+  img {
+    width: 100%;
+  }
+}
+.mallname {
+  font-size: 22px;
 }
 .wrapper {
   width: 100%;
   overflow: hidden;
+  display: flex;
 }
 .content {
   display: flex;
-  width: 575%;
 }
 .recommendgoods {
-  width: 125px;
+  width: 250px;
   border: 1px solid #e0e0e0;
   p {
-    font-size: 14px;
+    font-size: 30px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -248,34 +274,56 @@ export default {
     padding: 5px;
   }
 }
+.ss {
+  font-size: 20px;
+  color: #747474;
+}
 .recommendgoods > img {
   width: 100%;
 }
+.car {
+  background-color: #d9c20c;
+  padding: 5px;
+  flex: 1;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+.det {
+  padding: 5px;
+  background-color: #c43a04;
+  font-size: 16px;
+  flex: 2;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+}
 .floor {
   background-color: #b01e08;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   border-radius: 100%;
   text-align: center;
-  line-height: 20px;
+  line-height: 40px;
   color: white;
+  font-size: 28px;
   font-weight: bold;
   float: left;
 }
 .floorname {
   color: #b01e08;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 32px;
   float: left;
 }
 .thing {
   background-color: white;
 }
 .floorgoods {
-  width: 49%;
+  width: 49.4%;
   float: left;
   display: flex;
-  border:1px solid #8a8a8a;
+  border: 1px solid #dadada;
 }
 .floorgoods > img {
   width: 100%;
@@ -297,6 +345,7 @@ export default {
   color: #ff3211;
   text-align: center;
   margin: 0;
+  font-size: 20px;
 }
 .hotgoodsprice {
   font-size: 15px;
@@ -304,5 +353,7 @@ export default {
   text-align: center;
   font-weight: bold;
   color: red;
+  font-size: 20px;
+
 }
 </style>

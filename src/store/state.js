@@ -1,5 +1,6 @@
 export default {
   num: 200,
   citys: [],
-  name: ""
+  userInfo:{},
+  actives:1,
 };

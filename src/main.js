@@ -7,11 +7,13 @@ import axios from "axios";
 import Vant from 'vant';
 import 'vant/lib/index.css';
 import FastClick from 'fastclick'
+import momunt from "dayjs"
 // import 'lib-flexible'
 // import BScroll from 'better-scroll'
 FastClick.attach(document.body);
 Vue.use(Vant);
 Vue.config.productionTip = false;
+Vue.prototype.$momunt=momunt
 Vue.prototype.$axios = http;
 // 处理响应超时时间
 axios.defaults.timeout = 100000;
