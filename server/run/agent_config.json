@@ -68,7 +68,7 @@
     "onerror": {
       "errorPageUrl": "",
       "appErrorFilter": null,
-      "templatePath": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg-onerror\\lib\\onerror_page.mustache"
+      "templatePath": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg-onerror\\lib\\onerror_page.mustache"
     },
     "i18n": {
       "defaultLocale": "en_US",
@@ -81,8 +81,8 @@
     "watcher": {
       "type": "development",
       "eventSources": {
-        "default": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg-watcher\\lib\\event-sources\\default",
-        "development": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg-watcher\\lib\\event-sources\\development"
+        "default": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg-watcher\\lib\\event-sources\\default",
+        "development": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg-watcher\\lib\\event-sources\\development"
       }
     },
     "customLogger": {
@@ -105,7 +105,7 @@
       "files": 10,
       "fileExtensions": [],
       "whitelist": null,
-      "tmpdir": "C:\\Users\\ADMINI\\x7e1\\AppData\\Local\\Temp\\egg-multipart-tmp\\server",
+      "tmpdir": "C:\\Users\\13514\\AppData\\Local\\Temp\\egg-multipart-tmp\\server",
       "cleanSchedule": {
         "cron": "0 30 4 * * *"
       }
@@ -128,14 +128,14 @@
     },
     "static": {
       "prefix": "/public/",
-      "dir": "C:\\Users\\Administrator\\Desktop\\mall\\server\\app\\public",
+      "dir": "C:\\Users\\13514\\Desktop\\mall\\server\\app\\public",
       "dynamic": true,
       "preload": false,
       "buffer": false,
       "maxFiles": 1000
     },
     "view": {
-      "root": "C:\\Users\\Administrator\\Desktop\\mall\\server\\app\\view",
+      "root": "C:\\Users\\13514\\Desktop\\mall\\server\\app\\view",
       "cache": false,
       "defaultExtension": ".html",
       "defaultViewEngine": "",
@@ -157,7 +157,7 @@
       "open": "<Function open>"
     },
     "ejs": {
-      "root": "C:\\Users\\Administrator\\Desktop\\mall\\server\\app\\view",
+      "root": "C:\\Users\\13514\\Desktop\\mall\\server\\app\\view",
       "cache": false,
       "debug": false,
       "compileDebug": true,
@@ -192,7 +192,8 @@
         "mz-modules": "^2.1.0",
         "request": "^2.88.0",
         "silly-datetime": "^0.1.2",
-        "svg-captcha": "^1.3.12"
+        "svg-captcha": "^1.3.12",
+        "webpack-dev-server": "^2.9.1"
       },
       "devDependencies": {
         "autod": "^3.0.1",
@@ -229,9 +230,9 @@
       "author": "",
       "license": "MIT"
     },
-    "baseDir": "C:\\Users\\Administrator\\Desktop\\mall\\server",
-    "HOME": "C:\\Users\\Administrator",
-    "rundir": "C:\\Users\\Administrator\\Desktop\\mall\\server\\run",
+    "baseDir": "C:\\Users\\13514\\Desktop\\mall\\server",
+    "HOME": "C:\\Users\\13514",
+    "rundir": "C:\\Users\\13514\\Desktop\\mall\\server\\run",
     "dump": {
       "ignore": "<Set>"
     },
@@ -261,7 +262,7 @@
       }
     },
     "logger": {
-      "dir": "C:\\Users\\Administrator\\Desktop\\mall\\server\\logs\\server",
+      "dir": "C:\\Users\\13514\\Desktop\\mall\\server\\logs\\server",
       "encoding": "utf8",
       "env": "local",
       "level": "INFO",
@@ -342,8 +343,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg-session",
+      "from": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg-session",
       "version": "3.1.0"
     },
     "security": {
@@ -355,8 +356,8 @@
         "session"
       ],
       "env": [],
-      "from": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg-security",
+      "from": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg-security",
       "version": "2.5.0"
     },
     "jsonp": {
@@ -368,8 +369,8 @@
         "security"
       ],
       "env": [],
-      "from": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg-jsonp",
+      "from": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg-jsonp",
       "version": "2.0.0"
     },
     "onerror": {
@@ -381,8 +382,8 @@
         "jsonp"
       ],
       "env": [],
-      "from": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg-onerror",
+      "from": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg-onerror",
       "version": "2.1.0"
     },
     "i18n": {
@@ -392,8 +393,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg-i18n",
+      "from": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg-i18n",
       "version": "2.1.1"
     },
     "watcher": {
@@ -403,8 +404,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg-watcher",
+      "from": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg-watcher",
       "version": "3.1.0"
     },
     "schedule": {
@@ -414,8 +415,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg-schedule",
+      "from": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg-schedule",
       "version": "3.6.4"
     },
     "multipart": {
@@ -427,8 +428,8 @@
         "schedule"
       ],
       "env": [],
-      "from": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg-multipart",
+      "from": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg-multipart",
       "version": "2.7.1"
     },
     "development": {
@@ -442,8 +443,8 @@
       "env": [
         "local"
       ],
-      "from": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg-development",
+      "from": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg-development",
       "version": "2.4.3"
     },
     "logrotator": {
@@ -455,8 +456,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg-logrotator",
+      "from": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg-logrotator",
       "version": "3.1.0"
     },
     "static": {
@@ -466,8 +467,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg-static",
+      "from": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg-static",
       "version": "2.2.0"
     },
     "view": {
@@ -477,8 +478,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg-view",
+      "from": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg-view",
       "version": "2.1.2"
     },
     "mongoose": {
@@ -488,8 +489,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\Administrator\\Desktop\\mall\\server\\config\\plugin.js",
-      "path": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg-mongoose",
+      "from": "C:\\Users\\13514\\Desktop\\mall\\server\\config\\plugin.js",
+      "path": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg-mongoose",
       "version": "3.2.0"
     },
     "ejs": {
@@ -501,8 +502,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\Administrator\\Desktop\\mall\\server\\config\\plugin.js",
-      "path": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg-view-ejs",
+      "from": "C:\\Users\\13514\\Desktop\\mall\\server\\config\\plugin.js",
+      "path": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg-view-ejs",
       "version": "2.0.0"
     },
     "jwt": {
@@ -514,8 +515,8 @@
         "onerror"
       ],
       "env": [],
-      "from": "C:\\Users\\Administrator\\Desktop\\mall\\server\\config\\plugin.js",
-      "path": "C:\\Users\\Administrator\\Desktop\\mall\\server\\node_modules\\egg-jwt",
+      "from": "C:\\Users\\13514\\Desktop\\mall\\server\\config\\plugin.js",
+      "path": "C:\\Users\\13514\\Desktop\\mall\\server\\node_modules\\egg-jwt",
       "version": "3.1.6"
     }
   }

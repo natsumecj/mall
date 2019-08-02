@@ -75,7 +75,7 @@
     </van-row>
       <br>
       <van-row>
-          <div class="order">
+          <div class="order" @click="order">
               <van-cell title="全部订单" is-link icon="records"/>
           </div>
       </van-row>
@@ -131,7 +131,10 @@ export default {
     },
       address(){
         this.$router.push('/address')
-      }
+      },
+    order(){
+      this.$router.push('/order')
+    }
   },
   mounted() {},
   created() {},
